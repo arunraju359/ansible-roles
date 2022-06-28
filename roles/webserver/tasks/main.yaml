@@ -9,8 +9,8 @@
   notify: Restart HTTPD
 
 - name: Downloading the index file
-  get_url:
-    url: "{{INDEX_URL}}"
+  copy:
+    src: index.html
     dest: /var/www/html/index.html
   notify: Restart HTTPD
 
