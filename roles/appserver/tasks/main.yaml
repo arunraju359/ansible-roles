@@ -30,7 +30,7 @@
   become_user: "{{APPUSER}}"
 
 - name: Copy the context.xml
-  copy:
+  template:
     src: context.xml
     dest: "{{APPUSER_HOME}}/apache-tomcat-8.5.81/conf/"
     mode: '0775'
