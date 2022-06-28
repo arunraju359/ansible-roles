@@ -1,1 +1,4 @@
 APPUSER: "student"
+TOMCAT_HOME: /home/{{APPUSER}}
+TOMCAT_URL: "https://dlcdn.apache.org/tomcat/tomcat-8/v{{TOMCAT_VERSION}}/bin/apache-tomcat-{{TOMCAT_VERSION}}.zip"
+TOMCAT_VERSION: "8.5.81"
