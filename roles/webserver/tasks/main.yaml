@@ -6,11 +6,15 @@
   copy:
     src: proxy.conf
     dest: /etc/httpd/conf.d/proxy.conf
+  notify: Restart HTTPD
 
 - name: Downloading the index file
   get_url:
     url: "{{INDEX_URL}}"
     dest: /var/www/html/index.html
+  notify: Restart HTTPD
+
+
 - name: Starting the HTTPD server
   service:
     name: httpd
