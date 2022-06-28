@@ -7,3 +7,9 @@
   user:
     name: "{{APPUSER}}"
     comment: Adding the user
+
+- name: Tomcat Installation
+  unarchive:
+    src: "{{TOMCAT_URL}}"
+    dest: "{{APPUSER_HOME}}"
+  become_user: "{{APPUSER}}"
