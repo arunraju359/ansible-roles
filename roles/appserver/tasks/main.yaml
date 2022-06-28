@@ -1,0 +1,4 @@
+- name: Installing java
+  package:
+    name: java
+    state: present
