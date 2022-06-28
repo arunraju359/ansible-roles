@@ -63,9 +63,9 @@
 
 - name: Reload the student daemon 
   systemd:
+    name: student
     state: restarted
     daemon_reload: yes
-    name: student
 
 - name: Waitning for 8 sec 
   pause: 
