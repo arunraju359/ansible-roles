@@ -1,3 +1,9 @@
 - name: Installing the web server
   package:
     name: httpd
+
+- name: Starting the HTTPD server
+  service:
+    name: httpd
+    state: started
+    enabled: yes
