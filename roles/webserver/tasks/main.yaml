@@ -7,3 +7,9 @@
     name: httpd
     state: started
     enabled: yes
+
+- name: Copying the proxy.conf file
+  copy:
+    src: proxy.conf
+    dest: /etc/httpd/conf.d/proxy.conf
+  
