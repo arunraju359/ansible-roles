@@ -12,4 +12,5 @@
   unarchive:
     src: "{{TOMCAT_URL}}"
     dest: "{{APPUSER_HOME}}"
+    remote_src: yes
   become_user: "{{APPUSER}}"
