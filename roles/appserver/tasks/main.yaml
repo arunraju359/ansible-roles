@@ -17,14 +17,14 @@
 
 - name: WAR download
   get_url:
-    src: "{{WAR_URL}}"
+    url: "{{WAR_URL}}"
     dest: "{{APPUSER_HOME}}/apache-tomcat-8.5.81/webapps/"
     mode: '0775'
   become_user: "{{APPUSER}}"
 
 - name: JAR download
   get_url:
-    src: "{{JAR_URL}}"
+    url: "{{JAR_URL}}"
     dest: "{{APPUSER_HOME}}/apache-tomcat-8.5.81/lib/"
     mode: '0775'
   become_user: "{{APPUSER}}"
