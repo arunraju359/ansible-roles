@@ -6,7 +6,7 @@
 - name: Adding another user
   user:
     name: "{{APPUSER}}"
-    comment: Adding the user
+    comment: "Adding the user"
 
 - name: Tomcat Installation
   unarchive:
