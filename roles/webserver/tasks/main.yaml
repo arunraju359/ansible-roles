@@ -1,3 +1,4 @@
 - name: Installing the web server
+  gather_facts: no
   package:
     name: httpd
