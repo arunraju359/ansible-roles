@@ -2,14 +2,20 @@
   package:
     name: httpd
 
+- name: Copying the proxy.conf file
+  copy:
+    src: proxy.conf
+    dest: /etc/httpd/conf.d/proxy.conf
+
+- name: Downloading the index file
+  get_url:
+    url: "{{INDEX_URL}}"
+    dest: /var/www/html/index.html
 - name: Starting the HTTPD server
   service:
     name: httpd
     state: started
     enabled: yes
 
-- name: Copying the proxy.conf file
-  copy:
-    src: proxy.conf
-    dest: /etc/httpd/conf.d/proxy.conf
+
   
