@@ -1,0 +1,8 @@
+- name: Playbook to setup web and app server 
+  hosts: localhost
+  gather_facts: no
+  become: yes 
+  roles:  
+    - webserver
+    - appserver
+    
